@@ -17,10 +17,12 @@ function submitData() {
 
         if (isNaN(height)) {
             input_height.style.border = '1.5px solid red';
-
+            result.style.color = "red";
+            result.innerHTML = "ERROR: Invalid Input !"
         }
         else if (isNaN(weight)) {
             input_weight.style.border = '1.5px solid red'
+            result.innerHTML = "ERROR: Invalid Input !"
         }
         else {
             const bmi = (weight / (height * height)).toFixed(2)
